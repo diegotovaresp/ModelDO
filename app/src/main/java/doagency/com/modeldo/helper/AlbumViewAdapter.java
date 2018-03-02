@@ -26,15 +26,15 @@ import java.util.Locale;
 
 public class AlbumViewAdapter extends BaseAdapter  {
     // Declare Variables
-    Context mContext;
-    LayoutInflater inflater;
+    private Context mContext;
+    private LayoutInflater inflater;
     private List<Album> Albumlist = null;
     private ArrayList<Album> arraylist;
-    int idModelo;
-    int idModeloAlbum;
-    String NombreModelo,NewEmail,elusuariom;
-    int idTipoModelo;
-    int idUsuario;
+    private int idModelo;
+    private int idModeloAlbum;
+    private String NombreModelo,NewEmail,elusuariom;
+    private int idTipoModelo;
+    private int idUsuario;
 
     public AlbumViewAdapter(Context context, List<Album> Albumlist) {
         mContext = context;

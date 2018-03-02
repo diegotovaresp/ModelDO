@@ -206,6 +206,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             } while (c.moveToNext());
         }
 
+        c.close();
+
         return todos;
     }
 
