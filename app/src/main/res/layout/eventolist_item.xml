@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="@dimen/activity_horizontal_margin"
+    android:weightSum="3">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/btevento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:background="@null"
+            android:src="@drawable/ic_remove_red_eye_black_24dp"
+            app:srcCompat="@drawable/ic_remove_red_eye_black_24dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/nombreevento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:paddingBottom="2dip"
+            android:text="NOMBRE"
+            android:textColor="@color/colorAccent"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/tvagenciaeve"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/nombreevento"
+            android:layout_below="@+id/nombreevento"
+            android:layout_marginLeft="10dp"
+            android:text="Agencia" />
+
+        <TextView
+            android:id="@+id/tvfecha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/nombreevento"
+            android:layout_below="@+id/nombreevento"
+            android:layout_marginLeft="10dp"
+            android:text="FECHA" />
+
+        <TextView
+            android:id="@+id/tvHoraev"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/nombreevento"
+            android:layout_below="@+id/nombreevento"
+            android:layout_marginLeft="10dp"
+            android:text="Hora" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvpago"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/nombreevento"
+                android:layout_below="@+id/nombreevento"
+                android:layout_marginLeft="10dp"
+                android:text="Pago?" />
+
+            <ToggleButton
+                android:id="@+id/tbpagado"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="ToggleButton"
+                android:textOff="No"
+                android:textOn="Si" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvenviado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/nombreevento"
+                android:layout_below="@+id/nombreevento"
+                android:layout_marginLeft="10dp"
+                android:text="Envio?" />
+
+            <ToggleButton
+                android:id="@+id/tbenviado"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="ToggleButton"
+                android:textOff="No"
+                android:textOn="Si" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

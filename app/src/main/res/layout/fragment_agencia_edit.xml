@@ -1,0 +1,109 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="doagency.com.modeldo.AgenciaEditFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/tvAgenciaNuevaTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="18dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="10dp"
+        android:text="Editar Agencia"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tvAgenciaNuevaTitulo"
+        android:layout_below="@+id/tvAgenciaNuevaTitulo"
+        android:layout_marginTop="17dp"
+        android:text="Nombre Agencia" />
+
+    <EditText
+        android:id="@+id/etenombreagencia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView"
+        android:layout_below="@+id/textView"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:maxLength="80" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/etenombreagencia"
+        android:layout_below="@+id/etenombreagencia"
+        android:layout_marginTop="13dp"
+        android:text="Numero Identificación tributaria (CUIT, RUC, NIT, RIF, ETC)  " />
+
+        <EditText
+            android:id="@+id/eterucagencia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/textView2"
+            android:layout_below="@+id/textView2"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:maxLength="12" />
+
+
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/eterucagencia"
+        android:layout_below="@+id/eterucagencia"
+        android:layout_marginTop="15dp"
+        android:text="Telefono" />
+
+    <EditText
+        android:id="@+id/etetelefonoagencia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView5"
+        android:layout_below="@+id/textView5"
+        android:ems="10"
+        android:inputType="phone" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/etetelefonoagencia"
+        android:layout_below="@+id/etetelefonoagencia"
+        android:text="Direccion" />
+
+    <EditText
+        android:id="@+id/etedireccionagencia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView7"
+        android:layout_below="@+id/textView7"
+        android:layout_marginTop="11dp"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/btneagencia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etedireccionagencia"
+        android:layout_marginTop="20dp"
+        android:layout_toEndOf="@+id/textView"
+        android:text="Editar" />
+    </RelativeLayout>
+</FrameLayout>

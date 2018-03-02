@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="doagency.com.modeldo.LoginActivity">
+    <ProgressBar
+        android:id="@+id/login_progress"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/login_form"
+        android:layout_height="match_parent"
+        android:paddingTop="100dp"
+        android:orientation="vertical"
+        android:background="@drawable/sunset">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="match_parent"
+
+            android:layout_height="100dp"
+            android:paddingBottom="20dp"
+            app:srcCompat="@drawable/logo" />
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_gravity="center"
+        android:layout_height="280dp"
+        android:orientation="vertical"
+        android:background="#99ffffff"
+
+        >
+        <EditText
+            android:id="@+id/etUsuario"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:hint="Usuario"
+            android:textColor="#fff" />
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:imeActionId="@+id/login"
+            android:imeOptions="actionUnspecified"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:textColor="#fff" />
+        <CheckBox
+            android:id="@+id/saveLoginCheckBox"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:text="Recordar Password?"
+            android:textColor="#000" />
+
+        <Button
+            android:id="@+id/btnlogin"
+            android:layout_width="300dp"
+
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:text="Login" />
+    </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

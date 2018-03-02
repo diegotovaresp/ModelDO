@@ -1,0 +1,146 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="doagency.com.modeldo.InicioFragment"
+    android:background="@color/graylight"
+    android:orientation="vertical">
+
+    <!-- TODO: Update blank fragment layout -->
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+      <LinearLayout
+          android:id="@+id/lltoply"
+          android:layout_width="match_parent"
+          android:layout_height="350dp"
+          android:background="@drawable/gradientbackground"
+          android:orientation="vertical">
+          <android.support.v7.widget.CardView
+              android:layout_width="120dp"
+              android:layout_height="120dp"
+              android:elevation="12dp"
+              android:id="@+id/view2"
+
+              android:layout_gravity="center_horizontal"
+              android:layout_marginTop="35dp"
+              app:cardCornerRadius="60dp"
+              android:layout_centerHorizontal="true"
+              android:innerRadius="0dp"
+              android:shape="ring"
+              android:thicknessRatio="1.9">
+
+              <de.hdodenhof.circleimageview.CircleImageView
+                  android:id="@+id/ivPerfil"
+                  android:layout_width="match_parent"
+                  android:layout_height="120dp"
+                  android:layout_alignParentTop="true"
+
+                  android:layout_centerHorizontal="true"
+                  android:background="@null"
+                  android:src="@drawable/glenda" />
+          </android.support.v7.widget.CardView>
+
+
+          <TextView
+              android:id="@+id/tvAnfitriona"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center_horizontal"
+              android:layout_marginTop="10dp"
+              android:text="Anfitriona DO"
+              android:textColor="#fff"
+              android:textSize="21sp"
+              android:textStyle="bold" />
+      </LinearLayout>
+      <android.support.v7.widget.CardView
+          android:layout_width="300dp"
+          android:layout_height="120dp"
+          android:layout_centerHorizontal="true"
+          android:layout_marginTop="275dp">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:weightSum="3">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Deuda S/."
+            android:layout_gravity="center_horizontal"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tvdeudasol"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:paddingTop="10dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Deuda $"
+            android:layout_gravity="center_horizontal"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tvdeudadol"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:paddingTop="10dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Mes"
+            android:layout_gravity="center_horizontal"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tvgananciames"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:paddingTop="10dp"/>
+    </LinearLayout>
+
+</LinearLayout>
+      </android.support.v7.widget.CardView>
+  </RelativeLayout>
+
+</FrameLayout>

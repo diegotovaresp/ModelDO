@@ -1,0 +1,39 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="doagency.com.modeldo.AgenciaFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:text="Agencias"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:layout_gravity="center_horizontal"/>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/lvAgencias"></ListView>
+</LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabnueagencia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+
+
+        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+        android:src="@android:drawable/ic_input_add"
+        app:backgroundTint="@color/colorPrimaryDark" />
+
+</FrameLayout>
