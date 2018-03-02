@@ -1,8 +1,6 @@
 package doagency.com.modeldo.objetos;
 
-/**
- * Created by Diego on 17/03/2017.
- */
+
 
 public class Pais {
     private int idPais;

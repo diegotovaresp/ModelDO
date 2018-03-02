@@ -18,6 +18,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.squareup.picasso.Picasso;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -59,9 +61,12 @@ public class InicioFragment extends Fragment {
 
          v= inflater.inflate(R.layout.fragment_inicio,container, false);
         lltop=(LinearLayout) v.findViewById(R.id.lltoply);
-        Context context=getContext();
+        Context context=getActivity().getApplicationContext();
         WindowManager windowManager =(WindowManager)context.getSystemService(Context.WINDOW_SERVICE);
-        Display display = windowManager.getDefaultDisplay();
+        Display display = null;
+        if (windowManager != null) {
+            display = windowManager.getDefaultDisplay();
+        }
         Point size = new Point();
         display.getSize(size);
         ivPerfil=(CircleImageView) v.findViewById(R.id.ivPerfil);
@@ -88,15 +93,7 @@ public class InicioFragment extends Fragment {
 
     }
 
-    public static Drawable LoadImageFromWebOperations(String url) {
-        try {
-            InputStream is = (InputStream) new URL(url).getContent();
-            Drawable d = Drawable.createFromStream(is, "src name");
-            return d;
-        } catch (Exception e) {
-            return null;
-        }
-    }
+
 
     private void SetFragment(Fragment fragment){
         Bundle bundle = new Bundle();
@@ -104,6 +101,10 @@ public class InicioFragment extends Fragment {
         bundle.putString("idModelo",String.valueOf(idModelo));
         bundle.putString("idUsuario",String.valueOf(idUsuario));
         bundle.putString("NombreModelo",NombreModelo);
+        bundle.putString("elusuariom",elusuariom);
+
+        bundle.putString("perfilImagen",ImageUrl);
+
 
 
         FragmentManager fragmentManager = getFragmentManager();
@@ -160,7 +161,7 @@ public class InicioFragment extends Fragment {
                         ImageUrl=fotoPerfil;
                         elusuariom=musuario;
                         idModelo=Integer.parseInt(c.getString("idmodelo"));
-                        idUsuario=Integer.parseInt(c.getString("id"));;
+                        idUsuario=Integer.parseInt(c.getString("id"));
                         // tmp hash map for single contact
                         //  HashMap<String, String> contact = new HashMap<>();
                         usuario = new Usuario();
@@ -206,7 +207,7 @@ public class InicioFragment extends Fragment {
         protected void onPostExecute(Void result) {
             super.onPostExecute(result);
 
-            NomAnfitriona = (TextView) getActivity().findViewById(R.id.tvAnfitriona);
+            NomAnfitriona = (TextView) v.findViewById(R.id.tvAnfitriona);
 
             NomAnfitriona.setText(newNombre);
             DeudaSol = (TextView) v.findViewById(R.id.tvdeudasol);
@@ -215,9 +216,7 @@ public class InicioFragment extends Fragment {
             DeudaDol.setText(deudad);
 
             ivPerfil= (CircleImageView) v.findViewById(R.id.ivPerfil);
-            Drawable d= LoadImageFromWebOperations(ImageUrl);
-
-            ivPerfil.setImageDrawable(d);
+            Picasso.with(getActivity().getApplicationContext()).load(ImageUrl).into(ivPerfil);
 
         }
     }

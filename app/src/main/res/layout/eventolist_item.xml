@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
+    android:baselineAligned="false"
     android:padding="@dimen/activity_horizontal_margin"
     android:weightSum="3">
 
@@ -18,6 +19,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="10dp"
+            android:contentDescription="@string/descimgver"
             android:background="@null"
             android:src="@drawable/ic_remove_red_eye_black_24dp"
             app:srcCompat="@drawable/ic_remove_red_eye_black_24dp" />
@@ -34,9 +36,9 @@
             android:id="@+id/nombreevento"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
             android:paddingBottom="2dip"
-            android:text="NOMBRE"
+            android:text="@string/nombremasc"
             android:textColor="@color/colorAccent"
             android:textSize="24sp" />
 
@@ -44,28 +46,22 @@
             android:id="@+id/tvagenciaeve"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/nombreevento"
-            android:layout_below="@+id/nombreevento"
-            android:layout_marginLeft="10dp"
-            android:text="Agencia" />
+            android:layout_marginStart="10dp"
+            android:text="@string/agenciamasc" />
 
         <TextView
             android:id="@+id/tvfecha"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/nombreevento"
-            android:layout_below="@+id/nombreevento"
-            android:layout_marginLeft="10dp"
-            android:text="FECHA" />
+            android:layout_marginStart="10dp"
+            android:text="@string/fechamasc" />
 
         <TextView
             android:id="@+id/tvHoraev"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/nombreevento"
-            android:layout_below="@+id/nombreevento"
-            android:layout_marginLeft="10dp"
-            android:text="Hora" />
+            android:layout_marginStart="10dp"
+            android:text="@string/horamasc" />
     </LinearLayout>
 
     <LinearLayout
@@ -83,19 +79,16 @@
                 android:id="@+id/tvpago"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignStart="@+id/nombreevento"
-                android:layout_below="@+id/nombreevento"
-                android:layout_marginLeft="10dp"
-                android:text="Pago?" />
+                android:layout_marginStart="10dp"
+                android:text="@string/pagopreg" />
 
             <ToggleButton
                 android:id="@+id/tbpagado"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                android:text="ToggleButton"
-                android:textOff="No"
-                android:textOn="Si" />
+                android:textOff="@string/no"
+                android:textOn="@string/si" />
 
         </LinearLayout>
 
@@ -108,19 +101,16 @@
                 android:id="@+id/tvenviado"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignStart="@+id/nombreevento"
-                android:layout_below="@+id/nombreevento"
-                android:layout_marginLeft="10dp"
-                android:text="Envio?" />
+                android:layout_marginStart="10dp"
+                android:text="@string/enviopreg" />
 
             <ToggleButton
                 android:id="@+id/tbenviado"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                android:text="ToggleButton"
-                android:textOff="No"
-                android:textOn="Si" />
+                android:textOff="@string/no"
+                android:textOn="@string/si" />
         </LinearLayout>
 
     </LinearLayout>

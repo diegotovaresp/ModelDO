@@ -51,7 +51,13 @@ public class EventoFragment extends Fragment {
         View v= inflater.inflate(R.layout.fragment_evento, container, false);
         lv = (ListView) v.findViewById(R.id.lvieweve);
         eventoList = new ArrayList<>();
-
+        Bundle bundle = getArguments();
+        if (bundle != null){
+            newEmail=bundle.getString("Email");
+            idModelo=Integer.parseInt(bundle.getString("idModelo"));
+            idUsuario=Integer.parseInt(bundle.getString("idUsuario"));
+            NombreModelo=bundle.getString("NombreModelo");
+        }
         new GetEventos().execute();
         return  v;
     }

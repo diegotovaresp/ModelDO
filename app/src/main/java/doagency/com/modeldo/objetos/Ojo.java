@@ -1,8 +1,6 @@
 package doagency.com.modeldo.objetos;
 
-/**
- * Created by Diego on 18/03/2017.
- */
+
 
 public class Ojo {
     private int idOjo;

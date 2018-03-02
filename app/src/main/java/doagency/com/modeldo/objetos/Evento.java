@@ -3,9 +3,7 @@ package doagency.com.modeldo.objetos;
 import java.sql.Time;
 import java.util.Date;
 
-/**
- * Created by Diego on 19/03/2017.
- */
+
 
 public class Evento {
    private int idEvento;
