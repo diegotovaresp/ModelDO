@@ -216,7 +216,10 @@ public class InicioFragment extends Fragment {
             DeudaDol.setText(deudad);
 
             ivPerfil= (CircleImageView) v.findViewById(R.id.ivPerfil);
-            Picasso.with(getActivity().getApplicationContext()).load(ImageUrl).into(ivPerfil);
+            if (!ImageUrl.isEmpty()){
+                Picasso.with(getActivity().getApplicationContext()).load(ImageUrl).into(ivPerfil);
+
+            }
 
         }
     }

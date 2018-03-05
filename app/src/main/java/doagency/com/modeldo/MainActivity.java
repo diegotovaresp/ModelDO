@@ -1,11 +1,17 @@
 package doagency.com.modeldo;
 
+import android.Manifest;
 import android.app.Fragment;
 import android.app.FragmentManager;
+import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.MenuItem;
@@ -31,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
     private EventoFragment eventoFragment;
     private BookFragment bookFragment;
     private AgenciaFragment agenciaFragment;
+    int MY_PERMISSIONS_REQUEST_READ_EXTERNAL_STORAGE;
     String newEmail;
     Usuario usuario;
     int idModelo,idUsuario;
@@ -42,7 +49,18 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        if (ContextCompat.checkSelfPermission(MainActivity.this,
+                Manifest.permission.READ_EXTERNAL_STORAGE)
+                != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
+                    MY_PERMISSIONS_REQUEST_READ_EXTERNAL_STORAGE);
+        }
+        if (ContextCompat.checkSelfPermission(MainActivity.this, android.Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
+            if ( Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                requestPermissions(new String[]{android.Manifest.permission.CAMERA},
+                        5);
+            }
+        }
          navigation = (BottomNavigationView) findViewById(R.id.navigation);
          mMainframe = (FrameLayout) findViewById(R.id.main_frame);
         if (savedInstanceState == null) {
@@ -85,6 +103,14 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent intent) {
+        super.onActivityResult(requestCode, resultCode, intent);
+        Fragment fragment = (Fragment) getFragmentManager().findFragmentById(R.id.main_frame);
+        if (fragment != null) {
+            fragment.onActivityResult(requestCode, resultCode, intent);
+        }
+    }
 
     private void SetFragment(Fragment fragment){
         Bundle bundle = new Bundle();

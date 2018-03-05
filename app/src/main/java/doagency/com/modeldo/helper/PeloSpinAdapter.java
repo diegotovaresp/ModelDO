@@ -11,9 +11,7 @@ import doagency.com.modeldo.objetos.Pelo;
 
 import java.util.ArrayList;
 
-/**
- * Created by Diego on 17/03/2017.
- */
+
 
 public class PeloSpinAdapter extends ArrayAdapter<Pelo> {
     // Your sent context

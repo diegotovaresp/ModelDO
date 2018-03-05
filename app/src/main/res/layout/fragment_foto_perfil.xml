@@ -2,6 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:tag="FotoPerfilFragment"
     tools:context="doagency.com.modeldo.FotoPerfilFragment">
 
     <!-- TODO: Update blank fragment layout -->
@@ -29,6 +30,7 @@
                 android:layout_width="80dp"
                 android:layout_height="90dp"
                 android:text="Upload"
+                android:id="@+id/btnUploadPerfil"
                 android:layout_weight="1"
                 android:layout_gravity="center_horizontal"/>
         </LinearLayout>
