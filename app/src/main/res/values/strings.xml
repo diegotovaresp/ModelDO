@@ -31,6 +31,9 @@
     <string name="error_field_required">Requerido</string>
     <string name="error_incorrect_password">Enviar</string>
     <string name="permission_rationale">Enviar</string>
+    <string name="tvtituloAlbum">Albums de Fotos</string>
+    <string name="media">Multimedia</string>
+
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

@@ -46,7 +46,7 @@ public class AlbumViewAdapter extends BaseAdapter  {
 
     public class ViewHolder {
         TextView nombre;
-        Button tbalbum;
+        ImageButton tbalbum;
         ImageButton comparte;
     }
 
@@ -72,7 +72,7 @@ public class AlbumViewAdapter extends BaseAdapter  {
             view = inflater.inflate(R.layout.albumlist_item, null);
             // Locate the TextViews in listview_item.xml
             holder.nombre = (TextView) view.findViewById(R.id.nombre);
-            holder.tbalbum = (Button)  view.findViewById(R.id.tbalbum);
+            holder.tbalbum = (ImageButton)  view.findViewById(R.id.tbalbum);
             holder.comparte=(ImageButton) view.findViewById(R.id.tbalbumcomparte);
             view.setTag(holder);
         } else {

@@ -2,9 +2,6 @@ package doagency.com.modeldo.objetos;
 
 import java.util.Date;
 
-/**
- * Created by Diego on 12/10/2016.
- */
 
 public class Usuario {
     public Usuario(){
